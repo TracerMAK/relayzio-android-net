@@ -77,6 +77,7 @@ class DeviceNetInfoTest {
     @Test
     fun validIPConnection() {
         val info = DeviceNetInfo(context)
+        Assume.assumeNotNull(info.connectionType())
         Assert.assertNotNull(info.ipAddress())
         Log.d("RelayzIO_android_net", "IP is ${info.ipAddress()}")
     }
